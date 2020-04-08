@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task2</title>
+    <script>
+        let principal, time;
+        let data = [
+            {principal: 2500, time: 1.8}, {principal: 1000, time: 5}, {principal: 3000, time: 1}, {principal: 2000, time: 3}
+        ];
+        function interestCalculator(data){
+            if ((principal >= 2500) && ((time >1) && (time <3))){
+                let rate = 3;
+                let interestData = (principal * rate * time)/100;
+                console.log(interestData);
+                return interestData;
+            }else if((principal >= 2500) && (time >3)){
+                let rate = 4;
+                let interestData = (principal * rate * time)/100;
+                console.log(interestData);
+                return interestData;
+                
+            }else if((principal < 2500) || (time <=1)){
+                let rate = 2;
+                let interestData = (principal * rate * time)/100;
+                console.log(interestData);
+                return interestData;
+                
+            }else{
+                let rate = 1;
+                let interestData = (principal * rate * time)/100;
+                console.log(interestData);
+                return interestData;
+            }
+        }
+        interestCalculator(data);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
